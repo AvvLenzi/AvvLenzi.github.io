@@ -1,0 +1,14 @@
+{% extends "app/layouts/base.nj" %}
+
+{% block content%}
+<div class="index-container">
+    <section class="index-content">
+    <h3>
+        Domiciliazioni
+    </h3>
+    <p>
+        Lo studio legale Lenzi offre <b>domiciliazioni e sostituzioni processuali</b> presso gli uffici giudiziari di Firenze, Prato e Pistoia.
+    </p>
+    </section>
+</div>
+{% endblock %}

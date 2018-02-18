@@ -1,0 +1,9 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-copyright">&copy; Avv. Francesca Lenzi</div>
+        <nav class="footer-nav">
+            <a class="footer-nav-link" href="/privacy">Privacy Policy</a>
+            <a class="footer-nav-link" href="/privacy">Cookie Law</a>
+        </nav>
+    </dvi>
+</footer>
