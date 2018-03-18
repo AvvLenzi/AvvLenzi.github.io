@@ -55,7 +55,7 @@ gulp.task('views', () => {
 });
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
-  return gulp.src(['app/*.html', '.tmp/*.html', '.tmp/**/*.css'])
+  return gulp.src(['app/*.html', '.tmp/*.html', '.tmp/**/*.css', '.tmp/**/*.js'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
