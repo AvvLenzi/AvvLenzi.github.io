@@ -3,20 +3,25 @@
 {% block content%}
 <div class="index-container">
     <section class="index-content">
+        <h3>Competenze e Formazione</h3>
         <p>
-            L’Avv. Francesca Lenzi si è laureata all’Università degli Studi di Firenze nell’anno 2014 in Teoria del Processo. </br>
-            Attualmente è iscritta all’Ordine degli Avvocati di Prato.
+            L’Avv. Francesca Lenzi si è laureata all’Università degli Studi di Firenze nell’anno 2014 in Teoria del Processo. Attualmente è iscritta all’Ordine degli Avvocati di Prato e svolge la professione forense fornendo ai propri clienti un servizio di assistenza e consulenza legale attento, professionale e specificamente studiato per le singole esigenze di ognuno. Segue personalmente ogni caso, mettendo a disposizione del cliente la competenza tecnica acquisita e l’esperienza maturata.
+            </br>
+            </br>
         </p>
 
         <h3>
             Contatti
         </h3>
         <p>
-            Avvocato Francesca Lenzi,</br>
-            Viale Vittorio Veneto, n. 7 - 59100 (PO)</br>
-            Tel. <a href="tel:+39574981212">0574.981212</a></br>
-            Fax 0574.981212</br>
-            email: <a href="mailto:informazioni@avvocatolenzi.it">informazioni@avvocatolenzi.it</a></br>
+            Avv. Francesca Lenzi,</br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.it/maps/place/Viale+Vittorio+Veneto,+7,+59100+Prato+PO/@43.8777253,11.1006507,17z/data=!3m1!4b1!4m5!3m4!1s0x132af647852ba951:0x3f80826ff0a8d1cf!8m2!3d43.8777253!4d11.1028394">
+                Viale Vittorio Veneto, n. 7 - 59100 (PO)
+            </a></br>
+            Tel. <a href="tel:+3957435703">0574 35703</a></br>
+            Fax 0574 35668</br>
+            email: <a href="mailto:francesca@avvocatolenzi.it">francesca@avvocatolenzi.it</a></br>
+            pec: <a href="mailto:francescalenzi@pec.avvocati.prato.it">francescalenzi@pec.avvocati.prato.it</a>
         </p>
     </section>
 </div>

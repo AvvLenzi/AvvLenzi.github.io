@@ -37,6 +37,14 @@
     margin-top: $magic;
     margin-bottom: 2*$magic;
 
+    h2 {
+        font-size: $fs2;
+        font-family: $font-head2;
+        // letter-spacing: 1px;
+        // text-transform: uppercase;
+        margin-top: $magic;
+    }
+
     h3 {
         font-size: $fs1;
         font-family: $font-head2;
@@ -49,7 +57,7 @@
         margin-top: $magic;
         text-align: justify;
     }
-    b {
+    b, strong {
         font-weight: 700;
     }
 
