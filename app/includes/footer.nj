@@ -1,9 +1,0 @@
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-copyright">&copy; 2018 Avv. Francesca Lenzi - Tutti i diritti riservati</div>
-        <nav class="footer-nav">
-            <a class="footer-nav-link" href="/privacy.html">Privacy Policy</a>
-            <a class="footer-nav-link" href="/cookie.html">Cookie Law</a>
-        </nav>
-    </dvi>
-</footer>

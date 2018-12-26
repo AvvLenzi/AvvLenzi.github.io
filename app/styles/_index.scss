@@ -1,9 +1,0 @@
-.index {
-    &-container {
-        @extend .container;
-        flex: 1 1 auto;
-    }
-    &-content {
-        @extend .content;
-    }
-}
