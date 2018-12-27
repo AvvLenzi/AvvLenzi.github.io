@@ -1,0 +1,78 @@
+$bp-phone-start: 0px;
+$bp-phone-end: 767px;
+
+$bp-tablet-start: 768px;
+$bp-tablet-end: 1023px;
+
+$bp-desktop-start: 1024px;
+$bp-desktop-end: 99999px;
+
+@mixin breakpoint($class, $extra: "") {
+    @if $class == phone {
+        @media (min-width: $bp-phone-start) and (max-width: $bp-phone-end) {
+            @content;
+        }
+    } @else if $class == tablet {
+        @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+            @content;
+        }
+    } @else if $class == desktop {
+        @media (min-width: $bp-desktop-start) and (max-width: $bp-desktop-end) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint mixin supports: phone, tablet, desktop";
+    }
+
+    @if $extra != "" {
+        @include breakpoint($extra) {
+            @content;
+        }
+    }
+}
+
+html {
+    // background-color: gray;
+}
+
+body {
+
+}
+
+$max-page-width: 1440px;
+
+$desktop-container-width: 1024px;
+$tablet-container-width: 768px;
+$phone-container-width: 100%;
+
+$container-padding: 1rem;
+
+.container {
+    flex: 0 0 auto;
+    padding: 0 $container-padding;
+    @include breakpoint(phone) {
+        width: $phone-container-width;
+    }
+    @include breakpoint(tablet) {
+        width: $tablet-container-width;
+    }
+    @include breakpoint(desktop) {
+        width: $desktop-container-width;
+    }
+
+    &--fluid {
+        width: 100%;
+    }
+}
+
+.container-narrow {
+    flex: 0 0 auto;
+    padding: 0 $container-padding;
+    @include breakpoint(phone) {
+        width: 100%;
+        max-width: 460px;
+    }
+    @include breakpoint(tablet, desktop) {
+        width: 460px;
+    }
+}

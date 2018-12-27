@@ -1,0 +1,56 @@
+.header {
+    flex: 0 0 auto;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+        height: 9rem;
+    }
+    @include breakpoint(tablet) {
+        height: 6rem;
+    }
+    @include breakpoint(phone) {
+        height: 4rem;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-nav {
+        @extend .container;
+
+        padding-top: -1%; // eye fix
+
+        display: flex;
+        align-items: baseline;
+
+        &-logo {
+            @extend .typ-logo;
+            flex: 1 0 auto;
+        }
+
+        &-item {
+            @extend .typ-nav-item;
+            flex: 0 0 auto;
+
+            @include breakpoint(phone, tablet) {
+                display: none;
+            }
+
+            text-decoration: none;
+
+            &:hover {
+                color: $c-accent-light;
+            }
+
+            &:active,
+            &:hover:active {
+                color: $c-accent-dark;
+            }
+        }
+
+        &-item + &-item {
+            margin-left: 1rem;
+        }
+    }
+}

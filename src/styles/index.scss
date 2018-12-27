@@ -1,0 +1,274 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: auto;
+    max-width: $max-page-width;
+    background-color: white;
+
+    &-motto {
+        position: relative;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @include breakpoint(desktop) {
+            min-height: 653px;  // Set to picture height
+        }
+
+        &-content {
+            @extend .container;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &-box {
+            flex: 0 1 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-quote {
+            @extend .typ-motto;
+            margin-top: 2rem;
+
+            @include breakpoint(desktop) {
+                width: 600px;
+            }
+            @include breakpoint(tablet, phone) {
+                width: 100%;
+            }
+        }
+
+        &-cta {
+            @extend .component-btn;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        &-picture-in {
+            max-width: 100%;
+            margin-top: 2rem;
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+
+        &-picture-out {
+            position: absolute;
+            right: 0;
+            max-width: 100%;
+
+            @include breakpoint(tablet, phone) {
+                display: none;
+            }
+        }
+    }
+
+    &-field {
+        flex: 0 0 auto;
+        width: 100%;
+
+        display: flex;
+        @include breakpoint(desktop) {
+            flex-direction: row;
+            min-height: 500px;
+        }
+        @include breakpoint(tablet) {
+            flex-direction: row;
+            min-height: 500px;
+        }
+        @include breakpoint(phone) {
+            flex-direction: column;
+        }
+
+
+        $self: &;
+
+        &-picture {
+            flex: 0 0 50%;
+            @include breakpoint(phone) {
+                order: 1;
+            }
+
+            min-height: 30vh;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &--people {
+                background-image: url('/images/adult-audience-celebration-260907.jpg');
+            }
+
+            &--companies {
+                background-image: url('/images/adult-audience-celebration-260907.jpg');
+            }
+
+            &--consumers {
+                background-image: url('/images/bag-bags-bargain-5956.jpg');
+            }
+        }
+
+
+        &-description {
+            @include breakpoint(phone) {
+                order: 2;
+            }
+
+            text-align: left;
+            flex: 0 0 50%;
+            background-color: $c-bg-light;
+
+            display: flex;
+            align-items: top;
+
+            &--white {
+                background-color: $white;
+            }
+        }
+
+        &-box {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint(desktop) {
+                width: calc(#{$desktop-container-width} / 2);
+                padding: 5rem;
+            }
+            @include breakpoint(tablet) {
+                width: calc(#{$tablet-container-width} / 2);
+                padding: 3rem;
+            }
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 2rem $container-padding 3rem $container-padding;
+            }
+        }
+
+        &-title {
+            @extend .typ-field-title;
+
+            position: relative;
+
+            text-decoration: none;
+            text-align: center;
+
+            &:hover {
+                color: $c-text-light;
+            }
+
+            &:active,
+            &:hover:active {
+                color: $c-text-dark;
+            }
+
+            &::after,
+            &::before {
+                position: absolute;
+                color: $c-accent;
+                top: 0;
+                @include breakpoint(phone) {
+                    display: none;
+                }
+            }
+        }
+
+        &-list,
+        &-paragraph,
+        &-address {
+            margin-top: 3rem;
+            @extend .typ-field-paragraph;
+        }
+
+        &-item {
+            @extend .typ-field-item;
+        }
+
+        &--odd {
+            #{$self}-box {
+                flex: 0 0 auto;
+                padding-right: $container-padding;
+            }
+
+            #{$self}-description {
+                justify-content: flex-start;
+            }
+
+            #{$self}-title {
+                @include breakpoint(desktop, tablet) {
+                    text-align: left;
+                }
+
+                &::before {
+                    content: '<';
+                    transform: translateX(-200%);
+                }
+            }
+        }
+
+        &--even {
+            #{$self}-box {
+                flex: 0 0 auto;
+                padding-left: $container-padding;
+            }
+
+            #{$self}-description {
+                justify-content: flex-end;
+                @include breakpoint(desktop, tablet) {
+                    text-align: right;
+                }
+            }
+
+            #{$self}-title {
+                &::after {
+                    content: '>';
+                    transform: translateX(100%);
+                }
+                @include breakpoint(desktop, tablet) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &-map {
+        flex: 0 0 auto;
+        width: 100%;
+
+        @include breakpoint(desktop, tablet) {
+            height: 500px;
+        }
+
+        @include breakpoint(phone) {
+            height: 450px;
+        }
+
+        &-container {
+            overflow: hidden;
+            background: none!important;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

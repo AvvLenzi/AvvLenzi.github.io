@@ -1,0 +1,136 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.typ {
+    &-logo {
+        /* Avv. Francesca Lenzi: */
+        font-family: 'Niconne';
+        font-size: 3rem;
+        color: $c-text;
+        letter-spacing: 0;
+        line-height: 1.5;
+        text-decoration: none;
+
+        @include breakpoint(tablet) {
+            font-size: 2.5rem;
+        }
+        @include breakpoint(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    &-nav-item {
+        /* AREE DI COMPETENZA: */
+        font-family: 'PT Sans';
+        font-weight: 400;
+        font-size: 1.25rem;
+        color: $c-text;
+        letter-spacing: 0.22px;
+        text-align: center;
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    &-hero {
+        /* Tutela della persona: */
+        font-family: 'PT Serif';
+        font-size: 3rem;
+        color: $c-text;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 1.5;
+
+        @include breakpoint(tablet) {
+            font-size: 2rem;
+        }
+        @include breakpoint(phone) {
+            font-size: 1.5rem;
+        }
+
+        &--em {
+            font-family: 'PT Serif';
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &-motto {
+        /* Semplicità e chiare: */
+        font-family: 'PT Sans';
+        font-style: italic;
+        font-size: 2rem;
+        color: #000000;
+        text-align: center;
+        line-height: 1.6;
+        @include breakpoint(tablet) {
+            font-size: 2rem;
+        }
+        @include breakpoint(phone) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-btn {
+        font-family: 'PT Sans';
+        font-weight: 700;
+        font-size: 1rem;
+        color: $white;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 15px;
+    }
+
+    &-field {
+        &-title {
+            font-family: 'PT Serif';
+            font-size: 2rem;
+            color: $c-text;
+            letter-spacing: 0.91px;
+            line-height: 1.5;
+        }
+
+        &-item,
+        &-paragraph {
+            font-family: 'PT Sans';
+            font-size: 1.25rem;
+            color: $c-text-light;
+            line-height: 1.5;
+        }
+    }
+
+    &-footer {
+        &-title {
+            font-family: 'PT Sans';
+            font-size: 1.125rem;
+            color: $c-text;
+            letter-spacing: 0.28px;
+            line-height: 1.75;
+        }
+
+        &-link {
+            font-family: 'PT Sans';
+            font-size: 0.875rem;
+            color: $c-accent;
+            letter-spacing: 0.22px;
+            line-height: 1.8;
+        }
+
+        &-address {
+            font-family: 'PT Sans';
+            font-size: 0.875rem;
+            color: $c-text-light;
+            letter-spacing: 0;
+            line-height: 1.8;
+        }
+    }
+}

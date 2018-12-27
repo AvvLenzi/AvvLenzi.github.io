@@ -1,0 +1,63 @@
+.footer {
+    flex: 0 0 auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: $c-bg-light;
+
+    @include breakpoint(desktop) {
+        padding: 6rem 0;
+    }
+    @include breakpoint(tablet) {
+        padding: 3rem 0;
+    }
+    @include breakpoint(phone) {
+        padding: 2rem 0;
+    }
+
+    &-container {
+        @extend .container;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &-address,
+    &-sitemap,
+    &-legal {
+        display: flex;
+        flex-direction: column;
+
+        flex: 0 0 auto;
+        // width: calc(100% / 3);
+        width: 200px;
+
+        @include breakpoint(phone) {
+            padding: 1rem $container-padding;
+        }
+        @include breakpoint(desktop, tablet) {
+            padding: 0 $container-padding;
+        }
+    }
+
+    &-title {
+        @extend .typ-footer-title;
+        margin-bottom: 1rem;
+    }
+
+    &-link {
+        @extend .typ-footer-link;
+    }
+
+    &-address {
+        &-street {
+            @extend .typ-footer-address;
+        }
+    }
+}
