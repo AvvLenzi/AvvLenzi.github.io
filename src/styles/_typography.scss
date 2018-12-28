@@ -71,7 +71,7 @@ body {
         font-size: 2rem;
         color: #000000;
         text-align: center;
-        line-height: 1.6;
+        line-height: 2.2;
         @include breakpoint(tablet) {
             font-size: 2rem;
         }
@@ -85,7 +85,7 @@ body {
         font-weight: 700;
         font-size: 1rem;
         color: $white;
-        letter-spacing: 0;
+        letter-spacing: 0.05rem;
         text-align: center;
         line-height: 15px;
     }
@@ -93,10 +93,14 @@ body {
     &-field {
         &-title {
             font-family: 'PT Serif';
-            font-size: 2rem;
+            font-size: 1.8rem;
+            font-weight: 400;
             color: $c-text;
             letter-spacing: 0.91px;
-            line-height: 1.5;
+            line-height: 1.7;
+            @include breakpoint(phone) {
+                font-size: 1.5rem;
+            }
         }
 
         &-item,
@@ -104,7 +108,10 @@ body {
             font-family: 'PT Sans';
             font-size: 1.25rem;
             color: $c-text-light;
-            line-height: 1.5;
+            line-height: 1.7;
+            @include breakpoint(phone) {
+                font-size: 1rem;
+            }
         }
     }
 
@@ -112,7 +119,8 @@ body {
         &-title {
             font-family: 'PT Sans';
             font-size: 1.125rem;
-            color: $c-text;
+            font-weight: 700;
+            color: $white;
             letter-spacing: 0.28px;
             line-height: 1.75;
         }
@@ -120,7 +128,7 @@ body {
         &-link {
             font-family: 'PT Sans';
             font-size: 0.875rem;
-            color: $c-accent;
+            color: $c-accent-light;
             letter-spacing: 0.22px;
             line-height: 1.8;
         }
@@ -128,7 +136,7 @@ body {
         &-address {
             font-family: 'PT Sans';
             font-size: 0.875rem;
-            color: $c-text-light;
+            color: $white;
             letter-spacing: 0;
             line-height: 1.8;
         }

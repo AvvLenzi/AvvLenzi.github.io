@@ -17,6 +17,8 @@ module.exports = (mode, argv) => {
     entry: {
       index: "./pages/index.ejs",
       contatti: "./pages/contatti.ejs",
+      impresa: "./pages/impresa.ejs",
+      consumatori: "./pages/consumatori.ejs",
     },
 
     output: {

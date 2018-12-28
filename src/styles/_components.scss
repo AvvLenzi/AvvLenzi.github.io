@@ -9,6 +9,8 @@
         text-decoration: none;
         padding: 0.8rem 2rem;
 
+        box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+
         &:hover {
             background-color: $c-accent-light;
         }
@@ -16,6 +18,48 @@
         &:active,
         &:hover:active {
             background-color: $c-accent-dark;
+            box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.50);
         }
+    }
+
+    &-caption-link {
+        @extend .typ-field-title;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+            color: $c-text-light;
+        }
+
+        &:active,
+        &:hover:active {
+            color: $c-text-dark;
+        }
+
+
+        &::after,
+        &::before {
+            position: absolute;
+            color: $c-accent;
+            top: 0;
+            @include breakpoint(phone) {
+                display: none;
+            }
+        }
+
+        &--before {
+            &::before {
+                content: '<';
+                transform: translateX(-200%);
+            }
+        }
+
+        &--after {
+            &::after {
+                content: '>';
+                transform: translateX(100%);
+            }
+        }
+
     }
 }

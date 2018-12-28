@@ -1,0 +1,72 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+.contatti {
+    @extend .page;
+
+    &-container {
+        @extend .container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(phone) {
+            align-items: flex-end;
+        }
+    }
+
+    &-box {
+        @include breakpoint(desktop) {
+            width: 50%;
+            padding: 6rem 0;
+        }
+        @include breakpoint(tablet) {
+            width: 50%;
+            padding: 5rem 0;
+        }
+        @include breakpoint(phone) {
+            width: calc(100% - 32px);
+            padding: 3rem 0;
+        }
+    }
+
+    &-title {
+        @extend .typ-field-title;
+    }
+
+    &-paragraph {
+        @extend .typ-field-paragraph;
+        margin-top: 3rem;
+    }
+
+    &-list {
+        @extend .typ-field-paragraph;
+        margin-top: 3rem;
+        padding-left: 1.8rem;
+        list-style-type: disc;
+    }
+
+    &-item {
+        @extend .typ-field-item;
+        margin-top: 0.5rem;
+    }
+
+    &-cta {
+        margin-top: 3rem;
+        text-align: center;
+
+        a {
+            @extend .component-btn;
+            display: inline-block;
+        }
+    }
+}

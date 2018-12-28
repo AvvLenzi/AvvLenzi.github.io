@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Getting Started</title>
-    <link rel="stylesheet" type="text/css" href="../styles/index.scss">
-  </head>
-  <body>
-      <%- include('../partials/header'); -%>
+    <title>Avvocato Lenzi - Orari, Contatti, Dove siamo</title>
 
-      <p>Contatti</p>
+    <%- include('../partials/head'); -%>
+
+    <link rel="stylesheet" type="text/css" href="../styles/contatti.scss" />
+  </head>
+  <body class="contatti">
+    <%- include('../partials/header'); -%>
+
+    <%- include('../partials/hero_start', {page: 'contatti'}); -%>
+        Contatti
+    <%- include('../partials/hero_end'); -%>
+
+    <section class="contatti-container">
+        <div class="contatti-box">
+            <img class="contatti-icon" src="/images/clock.svg">
+            <h2 class="contatti-title">Orari della segreteria</h2>
+            <p class="contatti-paragraph">
+                Lavoriamo per assicurare in favore dei contatti un trattamento giusto, ottenendo risultati postitivi sia in sede di conciliazione che in quella giudiziaria nei casi di:
+            </p>
+        </div>
+
+        <div class="contatti-box">
+            <h2 class="contatti-title">Contatti</h2>
+            <p class="contatti-paragraph">
+                Lavoriamo per assicurare in favore dei contatti un trattamento giusto, ottenendo risultati postitivi sia in sede di conciliazione che in quella giudiziaria nei casi di:
+            </p>
+        </div>
+
+        <div class="contatti-box">
+            <h2 class="contatti-title">Dove siamo</h2>
+            <p class="contatti-paragraph">
+                Lavoriamo per assicurare in favore dei contatti un trattamento giusto, ottenendo risultati postitivi sia in sede di conciliazione che in quella giudiziaria nei casi di:
+            </p>
+        </div>
+    </section>
+
+    <%- include('../partials/footer'); -%>
+
+    <script src="${require('file-loader?name=[name].js?hash=[hash:20]!../js/index.js')}"></script>
   </body>
 </html>

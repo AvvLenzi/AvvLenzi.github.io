@@ -41,6 +41,17 @@ body {
 
 $max-page-width: 1440px;
 
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: auto;
+    max-width: $max-page-width;
+    background-color: white;
+}
+
 $desktop-container-width: 1024px;
 $tablet-container-width: 768px;
 $phone-container-width: 100%;

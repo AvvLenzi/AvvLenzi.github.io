@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avvocato Lenzi - Servizi Consumatori</title>
+
+    <%- include('../partials/head'); -%>
+
+    <link rel="stylesheet" type="text/css" href="../styles/consumatori.scss" />
+  </head>
+  <body class="consumatori">
+    <%- include('../partials/header'); -%>
+
+    <%- include('../partials/hero_start', {page: 'consumatori'}); -%>
+        Tutela dei <em>consumatori</em>
+    <%- include('../partials/hero_end'); -%>
+
+    <section class="consumatori-container">
+        <div class="consumatori-box">
+            <h2 class="consumatori-title">Assistenza giudiziale e stragiudiziale</h2>
+            <p class="consumatori-paragraph">
+                Lavoriamo per assicurare in favore dei consumatori un trattamento giusto, ottenendo risultati postitivi sia in sede di conciliazione che in quella giudiziaria nei casi di:
+            </p>
+
+            <ol class="consumatori-list">
+                <li class="consumatori-item">acquisto di beni consegnati in ritardo o viziati;</li>
+                <li class="consumatori-item">trattamenti ingiusti provenienti da assicurazioni o Banche;</li>
+                <li class="consumatori-item">disagi provocati da ritardi o disservizi delle compagnie aeree, telefoniche, di energia e gas;</li>
+                <li class="consumatori-item">clausole vessatorie;</li>
+                <li class="consumatori-item">vacanze rovinate.</li>
+            </ol>
+
+            <div class="consumatori-cta">
+                <a href="#">Chieda una Consulenza</a>
+            </div>
+
+        </div>
+    </section>
+
+    <%- include('../partials/footer'); -%>
+
+    <script src="${require('file-loader?name=[name].js?hash=[hash:20]!../js/index.js')}"></script>
+  </body>
+</html>

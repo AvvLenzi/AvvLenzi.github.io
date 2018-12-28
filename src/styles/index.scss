@@ -12,14 +12,7 @@
 
 
 .index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    margin: auto;
-    max-width: $max-page-width;
-    background-color: white;
+    @extend .page;
 
     &-motto {
         position: relative;
@@ -29,15 +22,13 @@
         align-items: center;
         width: 100%;
 
-        @include breakpoint(desktop) {
-            min-height: 653px;  // Set to picture height
-        }
+        padding: 5rem 0;
 
         &-content {
             @extend .container;
 
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
         }
 
@@ -66,23 +57,169 @@
             margin-top: 2rem;
             margin-bottom: 3rem;
         }
+    }
 
-        &-picture-in {
-            max-width: 100%;
-            margin-top: 2rem;
-            @include breakpoint(desktop) {
-                display: none;
+    &-area {
+        flex: 0 0 auto;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        background-color: $c-bg-light;
+
+        @include breakpoint(desktop) {
+            padding: 6rem 0;
+        }
+        @include breakpoint(tablet) {
+            padding: 3rem 0;
+        }
+        @include breakpoint(phone) {
+            padding: 2rem 0;
+        }
+
+        &-container {
+            @extend .container;
+            padding: 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(phone) {
+                flex-direction: column;
             }
         }
 
-        &-picture-out {
-            position: absolute;
-            right: 0;
-            max-width: 100%;
+        &-col {
+            flex: 0 0 auto;
+            padding: $container-padding;
+            width: calc(100% / 3);
 
-            @include breakpoint(tablet, phone) {
-                display: none;
+            @include breakpoint(phone) {
+                width: 100%;
             }
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-img {
+            padding-top: 50%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &--people {
+                background-image: url('/images/adult-audience-celebration-260907.jpg');
+            }
+
+            &--companies {
+                background-image: url('/images/adult-audience-celebration-260907.jpg');
+            }
+
+            &--consumers {
+                background-image: url('/images/bag-bags-bargain-5956.jpg');
+            }
+        }
+
+        &-title {
+            @extend .component-caption-link;
+
+            margin-top: 3rem;
+            @include breakpoint(phone) {
+                text-align: center;
+            }
+        }
+
+        &-list,
+        &-paragraph,
+        &-address {
+            margin-top: 3rem;
+            @extend .typ-field-paragraph;
+        }
+        &-item {
+            @extend .typ-field-item;
+        }
+    }
+
+    &-consultancy,
+    &-contacts {
+        flex: 0 0 auto;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(desktop) {
+            padding: 6rem 0;
+        }
+        @include breakpoint(tablet) {
+            padding: 3rem 0;
+        }
+        @include breakpoint(phone) {
+            padding: 2rem 0;
+        }
+
+        &--lightbg {
+            background-color: $c-bg-light;
+        }
+
+        &-container {
+            @extend .container;
+            padding: 0;
+
+            display: flex;
+            @include breakpoint(phone) {
+                flex-direction: column;
+            }
+        }
+
+        &-left,
+        &-right {
+            flex: 0 0 auto;
+            padding: $container-padding;
+            width: 50%;
+            @include breakpoint(phone) {
+                width: 100%;
+            }
+        }
+
+        &-left {
+            text-align: right;
+        }
+        &-right {
+            text-align: left;
+        }
+
+        &-title {
+            @extend .component-caption-link;
+
+            margin-top: 3rem;
+            @include breakpoint(phone) {
+                text-align: center;
+            }
+        }
+
+        &-img {
+            max-width: 100%;
+            width: calc(100% - 10px);
+            box-shadow: 10px 10px 24px 0 rgba(0,0,0,0.50);
+        }
+
+        &-list,
+        &-paragraph,
+        &-address {
+            @extend .typ-field-paragraph;
+            @include breakpoint(desktop) {
+                margin-top: 3rem;
+            }
+            @include breakpoint(tablet, phone) {
+                margin-top: 2rem;
+            }
+        }
+
+        &-item {
+            @extend .typ-field-item;
         }
     }
 

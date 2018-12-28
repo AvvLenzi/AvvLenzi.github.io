@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avvocato Lenzi - Servizi Impresa</title>
+
+    <%- include('../partials/head'); -%>
+
+    <link rel="stylesheet" type="text/css" href="../styles/impresa.scss" />
+  </head>
+  <body class="impresa">
+    <%- include('../partials/header'); -%>
+
+    <%- include('../partials/hero_start', {page: 'impresa'}); -%>
+        Servizi per le piccole e medie <em>imprese</em>
+    <%- include('../partials/hero_end'); -%>
+
+    <section class="impresa-container">
+        <div class="impresa-box">
+            <h2 class="impresa-title">Assistenza giudiziale e stragiudiziale</h2>
+            <p class="impresa-paragraph">
+                Ci sono molti problemi legali che possono distrarre un imprenditore
+                dalla sua attività. Per ridurre le sue preoccupazioni è necessario
+                affidarsi ad uno studio legale di fiducia che gestisca efficientemente
+                le questioni legali.
+            </p>
+
+            <p class="impresa-paragraph">
+                Lavoriamo in modo orientato alle singole necessità delle aziende,
+                fornendo consulenza e assistenza in riferimento a:
+            </p>
+
+            <ol class="impresa-list">
+                <li class="impresa-item">
+                redazione e revisione di contratti commerciali, tra i quali, quelli di
+                compravendita, leasing, licenza software, franchising, affitto di ramo
+                d’azienda, transazioni, appalti di opere o servizi;
+                </li>
+                <li class="impresa-item">fideiussioni, ipoteche e pegno;</li>
+                <li class="impresa-item">finanziamenti e contenzioso bancario;</li>
+                <li class="impresa-item">arbitrati;</li>
+                <li class="impresa-item">recupero del credito;</li>
+                <li class="impresa-item">
+                apertura e/o insinuazione nelle procedure di concordato e fallimento;
+                </li>
+                <li class="impresa-item">risarcimento del danno;</li>
+                <li class="impresa-item">contenzioso tributario.</li>
+            </ol>
+
+            <div class="impresa-cta">
+                <a href="#">Chieda una Consulenza</a>
+            </div>
+
+        </div>
+    </section>
+
+    <%- include('../partials/footer'); -%>
+
+    <script src="${require('file-loader?name=[name].js?hash=[hash:20]!../js/index.js')}"></script>
+  </body>
+</html>
