@@ -8,13 +8,12 @@
     <link rel="stylesheet" type="text/css" href="../styles/index.scss">
   </head>
   <body class="index">
-      <%- include('../partials/header'); -%>
 
+      <%- include('../partials/header'); -%>
 
       <%- include('../partials/hero_start', {page: 'index'}); -%>
         Tutela della <em>persona</em>, dei <em>consumatori</em> e assistenza delle piccole medie <em>imprese</em>
       <%- include('../partials/hero_end'); -%>
-
 
       <section class="index-motto">
         <div class="index-motto-content">
@@ -118,6 +117,5 @@
 
       <%- include('../partials/footer'); -%>
 
-      <script src="${require('file-loader?name=[name].js?hash=[hash:20]!../js/index.js')}"></script>
   </body>
 </html>

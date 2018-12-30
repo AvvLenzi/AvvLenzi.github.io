@@ -17,7 +17,7 @@ body {
             font-size: 2.5rem;
         }
         @include breakpoint(phone) {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 
@@ -71,7 +71,7 @@ body {
         font-size: 2rem;
         color: #000000;
         text-align: center;
-        line-height: 2.2;
+        line-height: 2;
         @include breakpoint(tablet) {
             font-size: 2rem;
         }
@@ -90,6 +90,13 @@ body {
         line-height: 15px;
     }
 
+    &-input {
+        font-family: 'PT Sans';
+        font-size: 1.25rem;
+        line-height: 2;
+        color: $c-text;
+    }
+
     &-field {
         &-title {
             font-family: 'PT Serif';
@@ -97,10 +104,18 @@ body {
             font-weight: 400;
             color: $c-text;
             letter-spacing: 0.91px;
-            line-height: 1.7;
+            line-height: 1.4;
             @include breakpoint(phone) {
                 font-size: 1.5rem;
             }
+        }
+
+        &-subtitle {
+            font-family: 'PT Serif';
+            font-size: 1.5rem;
+            color: $c-text;
+            font-weight: 400;
+            line-height: 1.4;
         }
 
         &-item,
@@ -108,7 +123,7 @@ body {
             font-family: 'PT Sans';
             font-size: 1.25rem;
             color: $c-text-light;
-            line-height: 1.7;
+            line-height: 1.5;
             @include breakpoint(phone) {
                 font-size: 1rem;
             }

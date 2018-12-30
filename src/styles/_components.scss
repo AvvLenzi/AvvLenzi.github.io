@@ -1,3 +1,5 @@
+$motto-padding: 4rem;
+
 .component{
     &-btn {
         flex: 0 0 auto;
@@ -5,6 +7,7 @@
         @extend .typ-btn;
         text-transform: uppercase;
         background-color: $c-accent;
+        border: none;
         border-radius: 8px;
         text-decoration: none;
         padding: 0.8rem 2rem;
@@ -19,6 +22,18 @@
         &:hover:active {
             background-color: $c-accent-dark;
             box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.50);
+        }
+    }
+
+    &-input {
+        @extend .typ-input;
+        margin-top: 3rem;
+        padding: 0 1rem;
+        background: #D8D8D8;
+        border: 1px solid #979797;
+
+        &::placeholder {
+            color: $c-text-dark;
         }
     }
 
@@ -61,5 +76,142 @@
             }
         }
 
+    }
+
+    &-map {
+        flex: 0 0 auto;
+        width: 100%;
+
+        @include breakpoint(desktop, tablet) {
+            height: 500px;
+        }
+
+        @include breakpoint(phone) {
+            height: 450px;
+        }
+
+        &-container {
+            overflow: hidden;
+            background: none!important;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+    &-motto {
+        position: relative;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        padding: $motto-padding 0;
+
+        &-content {
+            @extend .container;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-box {
+            flex: 0 1 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-quote {
+            @extend .typ-motto;
+            margin-top: 2rem;
+
+            @include breakpoint(desktop) {
+                width: 600px;
+            }
+            @include breakpoint(tablet, phone) {
+                width: 100%;
+            }
+        }
+
+        &-cta {
+            @extend .component-btn;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-area {
+        flex: 0 0 auto;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        background-color: $c-bg-light;
+
+        @include breakpoint(desktop) {
+            padding: 6rem 0;
+        }
+        @include breakpoint(tablet) {
+            padding: 3rem 0;
+        }
+        @include breakpoint(phone) {
+            padding: 2rem 0;
+        }
+
+        &-container {
+            @extend .container;
+            padding: 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(phone) {
+                flex-direction: column;
+            }
+        }
+
+        &-col {
+            flex: 0 0 auto;
+            padding: $container-padding;
+            width: calc(100% / 3);
+
+            @include breakpoint(phone) {
+                width: 100%;
+            }
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-img {
+            padding-top: 45%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &-title {
+            @extend .component-caption-link;
+
+            margin-top: 3rem;
+            @include breakpoint(phone) {
+                text-align: center;
+            }
+        }
+
+        &-list,
+        &-paragraph,
+        &-address {
+            margin-top: 3rem;
+            @extend .typ-field-paragraph;
+        }
+        &-item {
+            @extend .typ-field-item;
+        }
     }
 }

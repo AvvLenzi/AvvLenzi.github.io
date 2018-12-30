@@ -1,5 +1,7 @@
 const path = require('path');
 
+const webpack = require("webpack");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,11 +16,16 @@ process.chdir('src');
 module.exports = (mode, argv) => {
 
   return {
+    target: 'web',
+
     entry: {
-      index: "./pages/index.ejs",
-      contatti: "./pages/contatti.ejs",
-      impresa: "./pages/impresa.ejs",
-      consumatori: "./pages/consumatori.ejs",
+      'index': ["./pages/index.ejs", "./js/index.js"],
+      'contatti': "./pages/contatti.ejs",
+      'servizi-imprese': "./pages/servizi-imprese.ejs",
+      'tutela-consumatori': "./pages/tutela-consumatori.ejs",
+      'consulenze': "./pages/consulenze.ejs",
+      'come-lavoriamo': "./pages/come-lavoriamo.ejs",
+      'tutela-persona': "./pages/tutela-persona.ejs",
     },
 
     output: {
@@ -57,7 +64,7 @@ module.exports = (mode, argv) => {
               options: {
                 root: path.resolve(__dirname, 'src'),
                 interpolate: true,
-                attrs: ['img:src', 'link:href', 'script:src']
+                attrs: ['img:src', 'link:href']
               }
             },
             {
@@ -107,6 +114,11 @@ module.exports = (mode, argv) => {
 
     plugins: [
       new CleanWebpackPlugin(['dist']),
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jquery: "jQuery",
+        "window.jQuery": "jquery"
+      }),
     ],
 
     devServer: {

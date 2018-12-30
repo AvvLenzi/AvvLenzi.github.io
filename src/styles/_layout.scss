@@ -52,6 +52,14 @@ $max-page-width: 1440px;
     background-color: white;
 }
 
+.wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 $desktop-container-width: 1024px;
 $tablet-container-width: 768px;
 $phone-container-width: 100%;
@@ -80,10 +88,10 @@ $container-padding: 1rem;
     flex: 0 0 auto;
     padding: 0 $container-padding;
     @include breakpoint(phone) {
-        width: 100%;
-        max-width: 460px;
+        width: $phone-container-width;
     }
-    @include breakpoint(tablet, desktop) {
-        width: 460px;
+    @include breakpoint(desktop, tablet) {
+        width: $tablet-container-width;
     }
+
 }

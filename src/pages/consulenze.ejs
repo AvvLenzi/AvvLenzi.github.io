@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avvocato Lenzi - Servizi consulenze</title>
+
+    <%- include('../partials/head'); -%>
+
+    <link rel="stylesheet" type="text/css" href="../styles/consulenze.scss" />
+  </head>
+  <body class="consulenze">
+    <%- include('../partials/header'); -%>
+
+    <%- include('../partials/hero_start', {page: 'consulenze'}); -%>
+        Consulenze
+    <%- include('../partials/hero_end'); -%>
+
+    <section class="consulenze-container">
+        <div class="consulenze-box">
+            <h2 class="consulenze-title">Consulenza</h2>
+            <h3 class="consulenze-subtitle">Che cosa è?</h3>
+            <p class="consulenze-paragraph">
+                Si tratta di un primo incontro con l’avvocato. E’ necessario che lei ci esponga il suo caso per sapere se è una questione per la quale possiamo aiutarla.
+            </p>
+
+            <h3 class="consulenze-subtitle">Quando dovrei fissare un appuntamento?</h3>
+            <p class="consulenze-paragraph">
+                    Potrebbe volere una consulenza solo per raccogliere informazioni, oppure, potrebbe aver ricevuto una atto giudiziario. Quando è pronto a parlare delle sue opzioni fissi un appuntamento.
+            </p>
+
+            <h3 class="consulenze-subtitle">Cosa aspettarsi dalla consulenza</h3>
+            <p class="consulenze-paragraph">
+                    Il colloquio non è solo una opportunità per raccogliere informazioni ma è anche un un momento per determinare se le piacerebbe assumerci per rappresentarla.
+                    Solamente dopo l’accettazione dei costi e il conferimento dell’incarico potrà indicarci come suoi legali.
+            </p>
+        </div>
+    </section>
+
+    <section class="consulenze-form consulenze-form--light">
+        <div class="consulenze-container">
+            <form>
+                <h2 class="consulenze-title">Ci Contatti</h2>
+                <input class="consulenze-input" name="full_name" required placeholder="Nome e Cognome">
+                <input class="consulenze-input" name="company" placeholder="Azienda">
+                <input type="email" class="consulenze-input" name="email" required placeholder="e-mail">
+                <input class="consulenze-input" name="phone" required placeholder="Telefono">
+                <textarea class="consulenze-textarea" name="message" required placeholder="Messaggio"></textarea>
+
+                <label class="consulenze-checkbox" for="termsandconditions">
+                    <input name="termsandconditions" id="termsandconditions" type="checkbox" required>
+                    <span>Accetta termini e condizioni</span>
+                </label>
+
+                <div class="consulenze-cta">
+                    <input type="submit" value="Invio Messaggio">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <%- include('../partials/footer'); -%>
+
+  </body>
+</html>

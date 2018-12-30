@@ -1,0 +1,80 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+.consulenze {
+    @extend .page;
+
+    &-form {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        &--light {
+            background-color: $c-bg-light;
+        }
+    }
+
+    &-container {
+        @extend .container-narrow;
+
+    }
+
+    &-box {
+        width: 100%;
+        padding: 4rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &-title {
+        @extend .typ-field-title;
+        text-align: center;
+    }
+
+    &-subtitle {
+        @extend .typ-field-subtitle;
+        margin-top: 3rem;
+    }
+
+    &-paragraph {
+        @extend .typ-field-paragraph;
+        margin-top: 1rem;
+    }
+
+    &-input {
+        @extend .component-input;
+        width: 100%;
+    }
+
+    &-textarea {
+        @extend .component-input;
+        min-height: 10rem;
+    }
+
+    &-checkbox {
+        @extend .typ-input;
+        margin-top: 2rem;
+    }
+
+    &-cta {
+        margin-top: 3rem;
+        text-align: center;
+
+        input {
+            @extend .component-btn;
+            display: inline-block;
+        }
+    }
+}

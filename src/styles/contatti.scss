@@ -18,25 +18,33 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @include breakpoint(phone) {
-            align-items: flex-end;
-        }
     }
 
     &-box {
+        position: relative;
+        $img-margin: 88px;
         @include breakpoint(desktop) {
-            width: 50%;
-            padding: 6rem 0;
+            width: calc(50% + #{$img-margin});
+            padding: 6rem 0 6rem $img-margin;
         }
         @include breakpoint(tablet) {
-            width: 50%;
-            padding: 5rem 0;
+            width: calc(50% + #{$img-margin});
+            padding: 5rem 0 5rem $img-margin;
         }
         @include breakpoint(phone) {
-            width: calc(100% - 32px);
-            padding: 3rem 0;
+            width: 100%;
+            padding: 3rem 0 3rem $img-margin;
         }
+
+    }
+
+    &-box + &-box {
+        padding-top: 0;
+    }
+
+    &-icon {
+        position: absolute;
+        left: 0;
     }
 
     &-title {
@@ -60,13 +68,10 @@
         margin-top: 0.5rem;
     }
 
-    &-cta {
-        margin-top: 3rem;
-        text-align: center;
-
-        a {
-            @extend .component-btn;
-            display: inline-block;
+    &-map {
+        @extend .component-map;
+        &-container {
+            @extend .component-map-container;
         }
     }
 }

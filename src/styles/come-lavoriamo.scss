@@ -1,0 +1,108 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+.come-lavoriamo {
+    @extend .page;
+
+    &-motto {
+        @extend .component-motto;
+
+        &-content {
+            @extend .component-motto-content;
+        }
+
+        &-box {
+            @extend .component-motto-box;
+        }
+
+        &-quote {
+            @extend .component-motto-quote;
+            margin-top: 0;
+        }
+    }
+
+    &-area {
+        @extend .component-area;
+
+        &-container {
+            @extend .component-area-container;
+        }
+
+        &-col {
+            @extend .component-area-col;
+        }
+
+        &-img {
+            @extend .component-area-img;
+
+            background-size: auto;
+            background-position: center;
+
+            &--customer {
+                background-image: url('/images/conversation.svg');
+            }
+
+            &--support {
+                background-image: url('/images/bookshelf.svg');
+            }
+
+            &--clear {
+                background-image: url('/images/write-letter.svg');
+            }
+        }
+
+        &-title {
+            @extend .component-area-title;
+        }
+
+        &-list,
+        &-paragraph,
+        &-address {
+            @extend .component-area-list;
+        }
+        &-item {
+            @extend .component-area-item;
+        }
+    }
+
+    &-picture {
+        display: flex;
+        justify-content: center;
+
+        &-container {
+            @extend .container;
+
+            display: flex;
+            justify-content: center;
+
+            margin: 4rem 0;
+        }
+
+        &-figure {
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
+
+            h2 {
+                @extend .component-caption-link;
+                margin-top: 2rem;
+            }
+
+            p {
+                @extend .typ-field-paragraph;
+                margin-top: 1rem;
+            }
+        }
+
+    }
+}

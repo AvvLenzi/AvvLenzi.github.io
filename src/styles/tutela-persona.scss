@@ -1,0 +1,84 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+.tutela-persona {
+    @extend .page;
+
+    &-what {
+        @extend .wrapper;
+    }
+
+    &-container {
+        @extend .container;
+        padding: 0;
+        display: flex;
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &-menu {
+        flex: 0 0 auto;
+        padding: 3rem 1rem;
+
+        @include breakpoint(desktop) {
+            width: 30%;
+        }
+        @include breakpoint(tablet) {
+            width: 40%;
+        }
+        @include breakpoint(phone) {
+            padding: 2rem 1rem;
+        }
+
+        background-color: $c-bg-light;
+
+        ul {
+            li {
+                @extend .typ-field-item;
+                margin: 0.5rem 0 1rem 0;
+            }
+        }
+    }
+
+    &-content {
+        flex: 1 1 auto;
+        padding: 3rem 1rem;
+        @include breakpoint(phone) {
+            padding: 2rem 1rem;
+        }
+
+        display: flex;
+        justify-content: center;
+
+
+        &-title {
+            @extend .typ-field-title;
+        }
+
+        &-paragraph {
+            @extend .typ-field-paragraph;
+            margin-top: 2rem;
+        }
+
+        &-cta {
+            display: flex;
+            justify-content: center;
+            a {
+                @extend .component-motto-cta;
+            }
+        }
+    }
+
+
+}

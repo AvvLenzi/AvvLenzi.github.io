@@ -2,31 +2,34 @@
     flex: 0 0 auto;
     width: 100%;
 
-    @include breakpoint(desktop) {
-        height: 9rem;
-    }
-    @include breakpoint(tablet) {
-        height: 6rem;
-    }
-    @include breakpoint(phone) {
-        height: 4rem;
-    }
+    position: relative;
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 
     &-nav {
         @extend .container;
 
-        padding-top: -1%; // eye fix
+        @include breakpoint(desktop, tablet) {
+            margin: 1rem 0 1.5rem 0;
+        }
+        @include breakpoint(phone) {
+            margin: 0.5rem 0 0.75rem 0;
+        }
 
+        position: relative;
         display: flex;
         align-items: baseline;
 
         &-logo {
             @extend .typ-logo;
-            flex: 1 0 auto;
+            flex: 0 0 auto;
+        }
+
+        &-filler {
+            flex: 1 1 auto;
         }
 
         &-item {
@@ -49,8 +52,85 @@
             }
         }
 
+        &-btn {
+            @extend .typ-nav-item;
+            flex: 0 0 auto;
+            min-width: 2.5rem;
+
+            @include breakpoint(tablet){
+                font-size: 1.8rem;
+            }
+            @include breakpoint(phone) {
+                font-size: 1.2rem;
+            }
+            @include breakpoint(desktop){
+                display: none;
+            }
+        }
+
         &-item + &-item {
             margin-left: 1rem;
+        }
+    }
+
+    &-menu {
+        flex: 0 0 auto;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: $c-bg-light;
+        max-height: 0;
+        transition: max-height 250ms ease-in-out;
+
+        &--open {
+            max-height: 100vh;
+            display: flex;
+        }
+
+        &-item {
+            @extend .typ-nav-item;
+            flex: 0 0 auto;
+
+            margin: 0.5rem 0;
+            text-decoration: none;
+            &:hover {
+                color: $c-accent-light;
+            }
+            &:active,
+            &:hover:active {
+                color: $c-accent-dark;
+            }
+
+            &:first-child {
+                margin-top: 1.5rem
+            }
+            &:last-child {
+                margin-bottom: 1.5rem
+            }
+        }
+    }
+
+    &-fields {
+        position: absolute;
+        top: 100%;
+        right: 2rem;
+        z-index: 1000;
+        padding: 0 1rem;
+
+        background-color: $c-bg-light;
+
+        box-shadow: 0 0 10px rgba(0,0,0,0.8);
+        border-radius: 5px;
+
+        display: none;
+
+        &--open {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
     }
 }

@@ -15,99 +15,39 @@
     @extend .page;
 
     &-motto {
-        position: relative;
-        flex: 0 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-
-        padding: 5rem 0;
+        @extend .component-motto;
 
         &-content {
-            @extend .container;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend .component-motto-content;
         }
 
         &-box {
-            flex: 0 1 auto;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @extend .component-motto-box;
         }
 
         &-quote {
-            @extend .typ-motto;
-            margin-top: 2rem;
-
-            @include breakpoint(desktop) {
-                width: 600px;
-            }
-            @include breakpoint(tablet, phone) {
-                width: 100%;
-            }
+            @extend .component-motto-quote;
         }
 
         &-cta {
-            @extend .component-btn;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
+            @extend .component-motto-cta;
         }
     }
 
     &-area {
-        flex: 0 0 auto;
-        width: 100%;
+        @extend .component-area;
 
-        display: flex;
-        justify-content: center;
-
-        background-color: $c-bg-light;
-
-        @include breakpoint(desktop) {
-            padding: 6rem 0;
-        }
-        @include breakpoint(tablet) {
-            padding: 3rem 0;
-        }
-        @include breakpoint(phone) {
-            padding: 2rem 0;
-        }
 
         &-container {
-            @extend .container;
-            padding: 0;
-
-            display: flex;
-            justify-content: space-between;
-
-            @include breakpoint(phone) {
-                flex-direction: column;
-            }
+            @extend .component-area-container;
         }
 
         &-col {
-            flex: 0 0 auto;
-            padding: $container-padding;
-            width: calc(100% / 3);
-
-            @include breakpoint(phone) {
-                width: 100%;
-            }
-
-            display: flex;
-            flex-direction: column;
+            @extend .component-area-col;
         }
 
         &-img {
-            padding-top: 50%;
-
-            background-repeat: no-repeat;
-            background-size: cover;
+            @extend .component-area-img;
 
             &--people {
                 background-image: url('/images/adult-audience-celebration-260907.jpg');
@@ -123,22 +63,16 @@
         }
 
         &-title {
-            @extend .component-caption-link;
-
-            margin-top: 3rem;
-            @include breakpoint(phone) {
-                text-align: center;
-            }
+            @extend .component-area-title;
         }
 
         &-list,
         &-paragraph,
         &-address {
-            margin-top: 3rem;
-            @extend .typ-field-paragraph;
+            @extend .component-area-list;
         }
         &-item {
-            @extend .typ-field-item;
+            @extend .component-area-item;
         }
     }
 
@@ -390,22 +324,9 @@
     }
 
     &-map {
-        flex: 0 0 auto;
-        width: 100%;
-
-        @include breakpoint(desktop, tablet) {
-            height: 500px;
-        }
-
-        @include breakpoint(phone) {
-            height: 450px;
-        }
-
+        @extend .component-map;
         &-container {
-            overflow: hidden;
-            background: none!important;
-            height: 100%;
-            width: 100%;
+            @extend .component-map-container;
         }
     }
 }
