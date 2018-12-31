@@ -43,10 +43,26 @@
 
         background-color: $c-bg-light;
 
-        ul {
-            li {
-                @extend .typ-field-item;
-                margin: 0.5rem 0 1rem 0;
+        &-list {
+
+        }
+
+        &-item {
+            margin: 0.5rem 0 1rem 0;
+            a {
+                @extend .typ-nav-item;
+                text-decoration: none;
+                &:hover {
+                    color: $c-accent-light;
+                }
+                &:active,
+                &:hover:active {
+                    color: $c-accent-dark;
+                }
+
+                .fa.fa-chevron-right {
+                    font-size: 80%;
+                }
             }
         }
     }
@@ -63,11 +79,11 @@
 
 
         &-title {
-            @extend .typ-field-title;
+            @extend .typ-copy-title;
         }
 
         &-paragraph {
-            @extend .typ-field-paragraph;
+            @extend .typ-copy-paragraph;
             margin-top: 2rem;
         }
 

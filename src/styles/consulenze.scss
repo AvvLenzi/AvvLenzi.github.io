@@ -13,8 +13,16 @@
 .consulenze {
     @extend .page;
 
+
+    &-container {
+        @extend .container-narrow;
+        display: flex;
+        flex-direction: column;
+    }
+
     &-form {
         width: 100%;
+        padding: 3rem 0;
 
         display: flex;
         justify-content: center;
@@ -24,14 +32,9 @@
         }
     }
 
-    &-container {
-        @extend .container-narrow;
-
-    }
-
     &-box {
         width: 100%;
-        padding: 4rem 0;
+        padding: 3rem 0;
 
         display: flex;
         flex-direction: column;
@@ -39,17 +42,17 @@
     }
 
     &-title {
-        @extend .typ-field-title;
+        @extend .typ-copy-title;
         text-align: center;
     }
 
     &-subtitle {
-        @extend .typ-field-subtitle;
+        @extend .typ-copy-subtitle;
         margin-top: 3rem;
     }
 
     &-paragraph {
-        @extend .typ-field-paragraph;
+        @extend .typ-copy-paragraph;
         margin-top: 1rem;
     }
 
@@ -60,6 +63,7 @@
 
     &-textarea {
         @extend .component-input;
+        width: 100%;
         min-height: 10rem;
     }
 

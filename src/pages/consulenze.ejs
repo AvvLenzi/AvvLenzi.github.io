@@ -36,25 +36,34 @@
     </section>
 
     <section class="consulenze-form consulenze-form--light">
-        <div class="consulenze-container">
-            <form>
-                <h2 class="consulenze-title">Ci Contatti</h2>
-                <input class="consulenze-input" name="full_name" required placeholder="Nome e Cognome">
-                <input class="consulenze-input" name="company" placeholder="Azienda">
-                <input type="email" class="consulenze-input" name="email" required placeholder="e-mail">
-                <input class="consulenze-input" name="phone" required placeholder="Telefono">
-                <textarea class="consulenze-textarea" name="message" required placeholder="Messaggio"></textarea>
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfHI_yWl14YBkBHftTzgYOByY49d2t2OihGXOmLzrxTOvRCiw/formResponse"
+            target="_self"
+            id="bootstrapForm"
+            method="POST"
+            class="consulenze-container">
+            <h2 class="consulenze-title">Ci Contatti</h2>
 
-                <label class="consulenze-checkbox" for="termsandconditions">
-                    <input name="termsandconditions" id="termsandconditions" type="checkbox" required>
-                    <span>Accetta termini e condizioni</span>
-                </label>
+            <input id="396058420" type="text" name="entry.396058420" class="consulenze-input" required placeholder="Nome e Cognome">
+            <input id="345942081" type="text" name="entry.345942081" class="consulenze-input" name="company" placeholder="Azienda">
+            <input id="543908634" type="text" name="entry.543908634" type="email" class="consulenze-input" name="email" required placeholder="e-mail">
+            <input id="1525402437" type="text" name="entry.1525402437" class="consulenze-input" name="phone" required placeholder="Telefono">
+            <textarea id="1388731853" name="entry.1388731853" class="consulenze-textarea" name="message" required placeholder="Messaggio"></textarea>
 
-                <div class="consulenze-cta">
-                    <input type="submit" value="Invio Messaggio">
-                </div>
-            </form>
-        </div>
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="fbzx" value="8839045988858216918">
+
+            <input type="hidden" name="pageHistory" value="0">
+
+            <label class="consulenze-checkbox" for="termsandconditions">
+                <input name="termsandconditions" id="termsandconditions" type="checkbox" required>
+                <span>Accetta termini e condizioni</span>
+            </label>
+
+            <div class="consulenze-cta">
+                <input type="submit" value="Invio Messaggio">
+            </div>
+        </form>
     </section>
 
     <%- include('../partials/footer'); -%>

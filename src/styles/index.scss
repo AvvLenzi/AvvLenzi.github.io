@@ -64,11 +64,20 @@
 
         &-title {
             @extend .component-area-title;
+
+            @include breakpoint(tablet) {
+                min-height: 120px;
+            }
+            @include breakpoint(desktop) {
+                min-height: 80px;
+            }
         }
 
-        &-list,
         &-paragraph,
         &-address {
+            @extend .component-area-paragraph;
+        }
+        &-list {
             @extend .component-area-list;
         }
         &-item {
@@ -143,7 +152,7 @@
         &-list,
         &-paragraph,
         &-address {
-            @extend .typ-field-paragraph;
+            @extend .typ-copy-paragraph;
             @include breakpoint(desktop) {
                 margin-top: 3rem;
             }
@@ -153,7 +162,7 @@
         }
 
         &-item {
-            @extend .typ-field-item;
+            @extend .typ-copy-item;
         }
     }
 
@@ -238,7 +247,7 @@
         }
 
         &-title {
-            @extend .typ-field-title;
+            @extend .typ-copy-title;
 
             position: relative;
 
@@ -269,11 +278,11 @@
         &-paragraph,
         &-address {
             margin-top: 3rem;
-            @extend .typ-field-paragraph;
+            @extend .typ-copy-paragraph;
         }
 
         &-item {
-            @extend .typ-field-item;
+            @extend .typ-copy-item;
         }
 
         &--odd {

@@ -115,9 +115,10 @@ module.exports = (mode, argv) => {
     plugins: [
       new CleanWebpackPlugin(['dist']),
       new webpack.ProvidePlugin({
+        _fastclick: "fastclick",
         $: "jquery",
         jquery: "jQuery",
-        "window.jQuery": "jquery"
+        "window.jQuery": "jquery",
       }),
     ],
 

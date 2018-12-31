@@ -25,16 +25,12 @@ body {
         /* AREE DI COMPETENZA: */
         font-family: 'PT Sans';
         font-weight: 400;
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: $c-text;
         letter-spacing: 0.22px;
         text-align: center;
         line-height: 1.5;
         text-transform: uppercase;
-
-        @include breakpoint(tablet) {
-            font-size: 1rem;
-        }
     }
 
     &-hero {
@@ -97,13 +93,13 @@ body {
         color: $c-text;
     }
 
-    &-field {
+    &-copy {
         &-title {
             font-family: 'PT Serif';
-            font-size: 1.8rem;
+            font-size: 1.65rem;
             font-weight: 400;
             color: $c-text;
-            letter-spacing: 0.91px;
+            letter-spacing: 0.5px;
             line-height: 1.4;
             @include breakpoint(phone) {
                 font-size: 1.5rem;

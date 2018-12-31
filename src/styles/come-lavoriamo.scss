@@ -62,13 +62,24 @@
 
         &-title {
             @extend .component-area-title;
+
+            @include breakpoint(tablet) {
+                min-height: 120px;
+            }
+            @include breakpoint(desktop) {
+                min-height: 80px;
+            }
         }
 
-        &-list,
         &-paragraph,
         &-address {
+            @extend .component-area-paragraph;
+        }
+
+        &-list {
             @extend .component-area-list;
         }
+
         &-item {
             @extend .component-area-item;
         }
@@ -99,7 +110,7 @@
             }
 
             p {
-                @extend .typ-field-paragraph;
+                @extend .typ-copy-paragraph;
                 margin-top: 1rem;
             }
         }
