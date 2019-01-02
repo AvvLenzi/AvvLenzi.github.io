@@ -18,6 +18,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     &-box {
@@ -25,15 +28,15 @@
         $img-margin: 88px;
         @include breakpoint(desktop) {
             width: calc(50% + #{$img-margin});
-            padding: 6rem 0 6rem $img-margin;
+            padding: 4rem 0 4rem $img-margin;
         }
         @include breakpoint(tablet) {
             width: calc(50% + #{$img-margin});
-            padding: 5rem 0 5rem $img-margin;
+            padding: 4rem 0 4rem $img-margin;
         }
         @include breakpoint(phone) {
             width: 100%;
-            padding: 3rem 0 3rem $img-margin;
+            padding: 4rem 0 4rem $img-margin;
         }
 
     }
@@ -53,7 +56,7 @@
 
     &-paragraph {
         @extend .typ-copy-paragraph;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     &-list {
