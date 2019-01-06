@@ -1,0 +1,78 @@
+@import "reset";
+
+@import "colors";
+@import "layout";
+@import "typography";
+
+@import "components";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/hero";
+
+.privacy {
+    @extend .page;
+
+    &-container {
+        @extend .container;
+    }
+
+    &-box {
+        margin: auto;
+        @include breakpoint(desktop) {
+            width: calc(100% / 1.35);
+            padding: 6rem 0;
+        }
+        @include breakpoint(tablet) {
+            width: 100%;
+            padding: 5rem 0;
+        }
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 3rem 0;
+        }
+    }
+
+    &-title {
+        @extend .typ-copy-title;
+        text-align: center;
+    }
+
+    &-subtitle {
+        @extend .typ-copy-subtitle;
+        margin-top: 1.875rem;
+    }
+
+    &-paragraph {
+        @extend .typ-copy-paragraph;
+        margin-top: 1.875rem;
+        text-align: justify;
+
+        b,
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    &-list {
+        @extend .typ-copy-paragraph;
+        margin-top: 1.875rem;
+        padding-left: 1.8rem;
+        list-style-type: disc;
+    }
+
+    &-item {
+        @extend .typ-copy-item;
+        margin-top: 0.5rem;
+    }
+
+    &-cta {
+        margin-top: 3rem;
+        text-align: center;
+
+        a {
+            @extend .component-btn;
+            display: inline-block;
+        }
+    }
+}

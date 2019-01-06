@@ -5,6 +5,7 @@
 @import "typography";
 
 @import "components";
+@import "ihavecookies";
 
 @import "partials/header";
 @import "partials/footer";
@@ -50,15 +51,15 @@
             @extend .component-area-img;
 
             &--people {
-                background-image: url('/images/adult-audience-celebration-260907.jpg');
+                background-image: url('/images/adult-audience-celebration-260907_512.jpg');
             }
 
             &--companies {
-                background-image: url('/images/adult-audience-celebration-260907.jpg');
+                background-image: url('/images/fabrics-factory-industry-236748_512.jpg');
             }
 
             &--consumers {
-                background-image: url('/images/bag-bags-bargain-5956.jpg');
+                background-image: url('/images/bag-bags-bargain-5956_512.jpg');
             }
         }
 
@@ -163,172 +164,6 @@
 
         &-item {
             @extend .typ-copy-item;
-        }
-    }
-
-    &-field {
-        flex: 0 0 auto;
-        width: 100%;
-
-        display: flex;
-        @include breakpoint(desktop) {
-            flex-direction: row;
-            min-height: 500px;
-        }
-        @include breakpoint(tablet) {
-            flex-direction: row;
-            min-height: 500px;
-        }
-        @include breakpoint(phone) {
-            flex-direction: column;
-        }
-
-
-        $self: &;
-
-        &-picture {
-            flex: 0 0 50%;
-            @include breakpoint(phone) {
-                order: 1;
-            }
-
-            min-height: 30vh;
-
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            &--people {
-                background-image: url('/images/adult-audience-celebration-260907.jpg');
-            }
-
-            &--companies {
-                background-image: url('/images/adult-audience-celebration-260907.jpg');
-            }
-
-            &--consumers {
-                background-image: url('/images/bag-bags-bargain-5956.jpg');
-            }
-        }
-
-
-        &-description {
-            @include breakpoint(phone) {
-                order: 2;
-            }
-
-            text-align: left;
-            flex: 0 0 50%;
-            background-color: $c-bg-light;
-
-            display: flex;
-            align-items: top;
-
-            &--white {
-                background-color: $white;
-            }
-        }
-
-        &-box {
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
-            @include breakpoint(desktop) {
-                width: calc(#{$desktop-container-width} / 2);
-                padding: 5rem;
-            }
-            @include breakpoint(tablet) {
-                width: calc(#{$tablet-container-width} / 2);
-                padding: 3rem;
-            }
-            @include breakpoint(phone) {
-                width: 100%;
-                padding: 2rem $container-padding 3rem $container-padding;
-            }
-        }
-
-        &-title {
-            @extend .typ-copy-title;
-
-            position: relative;
-
-            text-decoration: none;
-            text-align: center;
-
-            &:hover {
-                color: $c-text-light;
-            }
-
-            &:active,
-            &:hover:active {
-                color: $c-text-dark;
-            }
-
-            &::after,
-            &::before {
-                position: absolute;
-                color: $c-accent;
-                top: 0;
-                @include breakpoint(phone) {
-                    display: none;
-                }
-            }
-        }
-
-        &-list,
-        &-paragraph,
-        &-address {
-            margin-top: 3rem;
-            @extend .typ-copy-paragraph;
-        }
-
-        &-item {
-            @extend .typ-copy-item;
-        }
-
-        &--odd {
-            #{$self}-box {
-                flex: 0 0 auto;
-                padding-right: $container-padding;
-            }
-
-            #{$self}-description {
-                justify-content: flex-start;
-            }
-
-            #{$self}-title {
-                @include breakpoint(desktop, tablet) {
-                    text-align: left;
-                }
-
-                &::before {
-                    content: '<';
-                    transform: translateX(-200%);
-                }
-            }
-        }
-
-        &--even {
-            #{$self}-box {
-                flex: 0 0 auto;
-                padding-left: $container-padding;
-            }
-
-            #{$self}-description {
-                justify-content: flex-end;
-                @include breakpoint(desktop, tablet) {
-                    text-align: right;
-                }
-            }
-
-            #{$self}-title {
-                &::after {
-                    content: '>';
-                    transform: translateX(100%);
-                }
-                @include breakpoint(desktop, tablet) {
-                    text-align: right;
-                }
-            }
         }
     }
 

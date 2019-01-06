@@ -35,8 +35,7 @@
         flex-direction: column;
 
         flex: 0 0 auto;
-        // width: calc(100% / 3);
-        width: 200px;
+        min-width: 230px;
 
         @include breakpoint(phone) {
             padding: 1rem $container-padding;
@@ -53,6 +52,10 @@
 
     &-link {
         @extend .typ-footer-link;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &-address {

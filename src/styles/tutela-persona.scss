@@ -88,6 +88,18 @@
             margin-top: 2rem;
         }
 
+        &-list {
+            @extend .typ-copy-paragraph;
+            margin-top: 2rem;
+            padding-left: 1.8rem;
+            list-style-type: disc;
+        }
+
+        &-item {
+            @extend .typ-copy-item;
+            margin-top: 0.5rem;
+        }
+
         &-cta {
             display: flex;
             justify-content: center;

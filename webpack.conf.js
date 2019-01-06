@@ -26,6 +26,7 @@ module.exports = (mode, argv) => {
       'consulenze': "./pages/consulenze.ejs",
       'come-lavoriamo': "./pages/come-lavoriamo.ejs",
       'tutela-persona': "./pages/tutela-persona.ejs",
+      'privacy': "./pages/privacy.ejs",
     },
 
     output: {
@@ -41,7 +42,8 @@ module.exports = (mode, argv) => {
             {
               loader: "babel-loader",
               options: {
-                presets: ["env"]
+                presets: ["env"],
+                plugins: ["@babel/plugin-proposal-object-rest-spread"]
               }
             }
           ]
@@ -117,7 +119,7 @@ module.exports = (mode, argv) => {
       new webpack.ProvidePlugin({
         _fastclick: "fastclick",
         $: "jquery",
-        jquery: "jQuery",
+        jQuery: "jquery",
         "window.jQuery": "jquery",
       }),
     ],

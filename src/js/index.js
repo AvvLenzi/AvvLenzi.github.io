@@ -1,5 +1,51 @@
-window.$ = window.jQuery = require('jquery');
 require("jquery-form");
+require('./jquery.ihavecookies');
+
+$(function() {
+    const options = {
+        expires: 365,
+        onAccept: function() {
+            console.log("Accepted Cookies", $.fn.ihavecookies.cookie())
+            console.log('Preferenze Sito', $.fn.ihavecookies.preference('preferences'));
+            console.log('Analytics', $.fn.ihavecookies.preference('analytics'));
+            console.log('Marketing', $.fn.ihavecookies.preference('marketing'));
+        },
+        title: 'Cookie e Privacy',
+        message: 'Per una migliore esperienza di navigazione questo sito fa uso dei Cookie. Se vuoi approfondire consulta la nostra',
+        link: '/privacy.html',
+        moreInfoLabel: 'Privacy Policy',
+        acceptBtnLabel: 'Accetta Cookies',
+        advancedBtnLabel: 'Personalizza',
+        cookieTypesTitle: 'Scegli i Cookie',
+        fixedCookieTypeLabel: 'Necessari',
+        fixedCookieTypeDesc: 'Questi cookie sono fondamentali per il corretto funzionamento del sito web',
+        cookieTypes: [
+            {
+                type: 'Preferenze Sito',
+                value: 'preferences',
+                description: 'These are cookies that are related to your site preferences, e.g. remembering your username, site colours, etc.'
+            },
+            {
+                type: 'Analytics',
+                value: 'analytics',
+                description: 'Cookies related to site visits, browser types, etc.'
+            },
+            {
+                type: 'Marketing',
+                value: 'marketing',
+                description: 'Cookies related to marketing, e.g. newsletters, social media, etc'
+            }
+        ]
+    };
+    $('body').ihavecookies(options);
+
+    $('#footer-cookie-link').click((event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        $('body').ihavecookies({...options, delay: 1}, 'reinit');
+    })
+})
+
 
 $(function () {
     const $headerBtn = $('#header-btn');
@@ -45,6 +91,22 @@ $(function () {
             error: function () {
                 alert('Messaggio Inviato. Grazie.')
             }
+        });
+    });
+})
+
+$(function () {
+    function hideAll () {
+        $('.tutela-persona-content').hide();
+    }
+    $('a[data-show]').each((index, aEl) => {
+        const $aEl = $(aEl);
+        $aEl.click(event => {
+            event.stopPropagation();
+            event.preventDefault();
+
+            hideAll();
+            $('#' + $aEl.data('show')).show();
         });
     });
 })
