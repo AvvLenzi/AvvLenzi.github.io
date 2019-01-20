@@ -74,6 +74,10 @@
             }
         }
 
+        &-chevron {
+            @extend .component-area-chevron;
+        }
+
         &-paragraph,
         &-address {
             @extend .component-area-paragraph;
@@ -159,6 +163,14 @@
             }
             @include breakpoint(tablet, phone) {
                 margin-top: 2rem;
+            }
+
+            a {
+                color: $c-accent;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
 

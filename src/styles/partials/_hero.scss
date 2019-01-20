@@ -67,5 +67,8 @@
         em {
             @extend .typ-hero--em;
         }
+        b {
+            @extend .typ-hero--bold;
+        }
     }
 }

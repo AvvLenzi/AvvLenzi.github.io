@@ -57,6 +57,13 @@
     &-paragraph {
         @extend .typ-copy-paragraph;
         margin-top: 2rem;
+        a {
+            color: $c-accent;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &-list {
