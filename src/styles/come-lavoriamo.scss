@@ -48,15 +48,15 @@
             background-position: center;
 
             &--customer {
-                background-image: url('/images/conversation.svg');
+                background-image: url('../images/conversation.svg');
             }
 
             &--support {
-                background-image: url('/images/bookshelf.svg');
+                background-image: url('../images/bookshelf.svg');
             }
 
             &--clear {
-                background-image: url('/images/write-letter.svg');
+                background-image: url('../images/write-letter.svg');
             }
         }
 
