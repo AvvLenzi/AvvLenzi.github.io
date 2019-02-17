@@ -90,6 +90,7 @@ $(function () {
             dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
             error: function () {
                 alert('Messaggio Inviato. Grazie.')
+                window.location = '/';
             }
         });
     });
@@ -110,3 +111,17 @@ $(function () {
         });
     });
 })
+
+$(function () {
+    // fix ie11 layout bug:
+    const isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
+    if (!isIE11) {
+        return;
+    }
+
+    const $hero = $('.hero');
+    $hero.css('align-items', 'flex-start');
+    setTimeout(function () {
+        $hero.css('align-items', 'center');
+    }, 50);
+});

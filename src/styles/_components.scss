@@ -5,6 +5,7 @@ $motto-padding: 4rem;
         flex: 0 0 auto;
 
         @extend .typ-btn;
+        -webkit-appearance: none;
         text-transform: uppercase;
         background-color: $c-accent;
         border: none;
@@ -31,6 +32,7 @@ $motto-padding: 4rem;
         padding: 0 1rem;
         background: #D8D8D8;
         border: 1px solid #979797;
+        min-height: 2.5rem; // ie11 fix: line-height * font-size
 
         &::placeholder {
             color: $c-text-light;

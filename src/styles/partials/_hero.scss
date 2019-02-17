@@ -1,4 +1,10 @@
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    min-width: 0;
+
     position: relative;
     width: 100%;
     height: 75vh;
@@ -6,10 +12,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &--index {
         background-image: url("../images/piazza_comune_prato_2048.jpg");
