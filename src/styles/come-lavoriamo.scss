@@ -102,6 +102,14 @@
             text-align: center;
             img {
                 max-width: 100%;
+
+                @include breakpoint(phone, tablet) {
+                    width: 70%;
+                }
+                @include breakpoint(desktop) {
+                    width: 50%;
+                }
+
             }
 
             h2 {
