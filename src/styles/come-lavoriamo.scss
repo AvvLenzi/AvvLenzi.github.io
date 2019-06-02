@@ -13,23 +13,6 @@
 .come-lavoriamo {
     @extend .page;
 
-    &-motto {
-        @extend .component-motto;
-
-        &-content {
-            @extend .component-motto-content;
-        }
-
-        &-box {
-            @extend .component-motto-box;
-        }
-
-        &-quote {
-            @extend .component-motto-quote;
-            margin-top: 0;
-        }
-    }
-
     &-area {
         @extend .component-area;
 
@@ -95,10 +78,17 @@
             display: flex;
             justify-content: center;
 
+            @include breakpoint(phone) {
+              flex-direction: column;
+            }
+
             margin: 4rem 0;
         }
 
+
+
         &-figure {
+            flex: 0 0 50%;
             text-align: center;
             img {
                 max-width: 100%;
@@ -111,16 +101,24 @@
                 }
 
             }
+        }
 
-            h2 {
-                @extend .component-caption-link;
-                margin-top: 2rem;
-            }
+        &-description {
+          flex: 0 0 50%;
 
-            p {
-                @extend .typ-copy-paragraph;
-                margin-top: 1rem;
+          h2 {
+            @extend .component-caption-link;
+            margin-top: 2rem;
+
+            @include breakpoint(phone) {
+              text-align: center;
             }
+          }
+
+          p {
+              @extend .typ-copy-paragraph;
+              margin-top: 1rem;
+          }
         }
 
     }

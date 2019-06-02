@@ -35,7 +35,7 @@ body {
 
     &-hero {
         /* Tutela della persona: */
-        font-family: 'PT Serif';
+        font-family: 'PT Sans';
         font-size: 3rem;
         color: $c-text;
         letter-spacing: 0;
@@ -50,13 +50,13 @@ body {
         }
 
         &--em {
-            font-family: 'PT Serif';
+            font-family: 'PT Sans';
             font-weight: 700;
             font-style: italic;
         }
 
         &--bold {
-            font-family: 'PT Serif';
+            font-family: 'PT Sans';
             font-weight: 700;
         }
 
@@ -100,7 +100,7 @@ body {
 
     &-copy {
         &-title {
-            font-family: 'PT Serif';
+            font-family: 'PT Sans';
             font-size: 1.55rem;
             font-weight: 700;
             color: $c-text;
@@ -112,7 +112,7 @@ body {
         }
 
         &-subtitle {
-            font-family: 'PT Serif';
+            font-family: 'PT Sans';
             font-size: 1.25rem;
             color: $c-text;
             font-weight: 700;
@@ -149,7 +149,7 @@ body {
         &-link {
             font-family: 'PT Sans';
             font-size: 1rem;
-            color: $c-accent-light;
+            color: $c-accentdark;
             letter-spacing: 0.22px;
             line-height: 1.8;
         }

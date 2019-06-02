@@ -117,7 +117,7 @@ $motto-padding: 4rem;
             margin-top: 2rem;
 
             @include breakpoint(desktop) {
-                width: 600px;
+                width: 764px;
             }
             @include breakpoint(tablet, phone) {
                 width: 100%;
@@ -185,8 +185,6 @@ $motto-padding: 4rem;
 
         &-title {
             @extend .component-caption-link;
-
-            margin-top: 2rem;
             @include breakpoint(phone) {
                 text-align: center;
             }

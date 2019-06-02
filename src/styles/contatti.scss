@@ -84,4 +84,79 @@
             @extend .component-map-container;
         }
     }
+
+    &-form {
+
+      width: 100%;
+      padding: 3rem 0;
+
+      display: flex;
+      justify-content: center;
+
+      &-container {
+        @extend .container-narrow;
+      }
+
+      &--light {
+          background-color: $c-bg-light;
+      }
+
+      &-box {
+          width: 100%;
+          padding: 3rem 0;
+
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+      }
+
+      &-title {
+          @extend .typ-copy-title;
+          text-align: center;
+      }
+
+      &-subtitle {
+          @extend .typ-copy-subtitle;
+          margin-top: 3rem;
+      }
+
+      &-paragraph {
+          @extend .typ-copy-paragraph;
+          margin-top: 1rem;
+      }
+
+      &-input {
+          @extend .component-input;
+          width: 100%;
+      }
+
+      &-textarea {
+          @extend .component-input;
+          width: 100%;
+          min-height: 10rem;
+      }
+
+      &-checkbox {
+          @extend .typ-input;
+          margin-top: 2rem;
+
+          a {
+              color: $c-accent;
+              text-decoration: none;
+              &:hover {
+                  text-decoration: underline;
+              }
+          }
+      }
+
+      &-cta {
+          margin-top: 3rem;
+          text-align: center;
+
+          input {
+              @extend .component-btn;
+              display: inline-block;
+          }
+      }
+    }
 }

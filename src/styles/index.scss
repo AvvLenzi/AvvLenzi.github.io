@@ -66,16 +66,9 @@
         &-title {
             @extend .component-area-title;
 
-            @include breakpoint(tablet) {
-                min-height: 120px;
-            }
-            @include breakpoint(desktop) {
-                min-height: 80px;
-            }
-        }
-
-        &-chevron {
-            @extend .component-area-chevron;
+            border-bottom: 5px solid black;
+            padding-bottom: 16px;
+            align-self: flex-start;
         }
 
         &-paragraph,
@@ -117,6 +110,7 @@
             padding: 0;
 
             display: flex;
+            align-items: center;
             @include breakpoint(phone) {
                 flex-direction: column;
             }
@@ -125,6 +119,9 @@
         &-left,
         &-right {
             flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+
             padding: $container-padding;
             width: 50%;
             @include breakpoint(phone) {
@@ -134,15 +131,15 @@
 
         &-left {
             text-align: right;
+            align-items: flex-end;
         }
         &-right {
             text-align: left;
+            align-items: flex-start;
         }
 
         &-title {
             @extend .component-caption-link;
-
-            margin-top: 3rem;
             @include breakpoint(phone) {
                 text-align: center;
             }
@@ -151,7 +148,7 @@
         &-img {
             max-width: 100%;
             width: calc(100% - 10px);
-            box-shadow: 10px 10px 24px 0 rgba(0,0,0,0.50);
+            // box-shadow: 10px 10px 24px 0 rgba(0,0,0,0.50);
         }
 
         &-list,
@@ -159,10 +156,10 @@
         &-address {
             @extend .typ-copy-paragraph;
             @include breakpoint(desktop) {
-                margin-top: 3rem;
+                margin-top: 1rem;
             }
             @include breakpoint(tablet, phone) {
-                margin-top: 2rem;
+                margin-top: 1rem;
             }
 
             a {
@@ -172,6 +169,11 @@
                     text-decoration: underline;
                 }
             }
+        }
+
+        &-cta {
+          @extend .component-btn;
+          margin-top: 2rem;
         }
 
         &-item {
