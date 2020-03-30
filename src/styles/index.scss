@@ -83,6 +83,67 @@
         }
     }
 
+    &-picture {
+      display: flex;
+      justify-content: center;
+
+      &-container {
+          @extend .container;
+
+          display: flex;
+          justify-content: center;
+
+          @include breakpoint(phone) {
+            flex-direction: column;
+          }
+
+          margin: 4rem 0;
+      }
+
+
+
+      &-figure {
+          flex: 0 0 50%;
+          text-align: center;
+          img {
+              max-width: 100%;
+
+              @include breakpoint(phone, tablet) {
+                  width: 70%;
+              }
+              @include breakpoint(desktop) {
+                  width: 50%;
+              }
+
+          }
+      }
+
+      &-description {
+        flex: 0 0 50%;
+
+        h2 {
+          @extend .component-caption-link;
+          margin-top: 2rem;
+
+          @include breakpoint(phone) {
+            text-align: center;
+          }
+        }
+
+        p {
+            @extend .typ-copy-paragraph;
+            margin-top: 1rem;
+        }
+      }
+
+      &-cta {
+        display: flex;
+        @include breakpoint(phone) {
+          justify-content: center;
+        }
+      }
+  }
+
     &-virus,
     &-consultancy,
     &-contacts {
@@ -117,6 +178,7 @@
             }
         }
 
+        &-content,
         &-left,
         &-right {
             flex: 0 0 auto;
@@ -128,6 +190,10 @@
             @include breakpoint(phone) {
                 width: 100%;
             }
+        }
+
+        &-content {
+          width: 100%;
         }
 
         &-left {
@@ -149,6 +215,9 @@
         &-img {
             max-width: 100%;
             width: calc(100% - 10px);
+            @include breakpoint(phone) {
+              align-self: center;
+            }
             // box-shadow: 10px 10px 24px 0 rgba(0,0,0,0.50);
         }
 
